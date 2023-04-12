@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Location;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,7 +19,7 @@ class ObservationFactory extends Factory
     {
         return [
             'observed_at' => $this->faker->dateTime(),
-            'details' => '<p>'.implode('</p><p>', $this->faker->paragraphs(5)).'</p>'
+            'details' => '<p>'.implode('</p><p>', $this->faker->paragraphs(5)).'</p>',
         ];
     }
 }

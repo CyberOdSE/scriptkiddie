@@ -25,6 +25,7 @@
                             <thead>
                             <tr>
                                 <th style="width: 5%">ID</th>
+                                <th style="width: 5%">Name and location</th>
                                 <th style="width: 15%">Observed at</th>
                                 <th style="width: 20%">Species</th>
                                 <th style="width: 20%">Location</th>
@@ -41,10 +42,9 @@
                                             {{ $observation->observed_at }}
                                         </a>
                                     </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>
+                                        {{ $observation->name }}
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

@@ -20,7 +20,6 @@ class LocationFactory extends Factory
             'name' => $this->faker->name(),
             'latitude' => $this->faker->latitude(),
             'longitude' => $this->faker->longitude()
-
         ];
     }
 }

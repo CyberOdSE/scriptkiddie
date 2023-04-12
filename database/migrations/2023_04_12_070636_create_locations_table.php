@@ -19,6 +19,7 @@ return new class extends Migration
             $table->double('latitude')->default(0.0);
             $table->double('longitude')->default(0.0);
             $table->timestamps();
+            ;
         });
     }
 
