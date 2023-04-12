@@ -13,5 +13,4 @@ class Location extends Model
         'latitude',
         'longitude'
     ];
-
 }
