@@ -4,8 +4,8 @@
     <section class="hero  is-small  is-bold is-primary">
         <div class="hero-body">
             <div class="container">
-                <p class="title is-2">Observations</p>
-                <p class="subtitle is-3">All the birds spotted</p>
+                <p class="title is-2">Locations</p>
+                <p class="subtitle is-3">All the birds Located :D</p>
 
             </div>
         </div>
@@ -18,35 +18,36 @@
                     <div class="content">
 
                         <div class="has-text-right">
-                            <a href="/observations/create" class="button is-primary">Add a new observation...</a>
+                            <a href="/locations/create" class="button is-primary">Add a new Location...</a>
                         </div>
 
                         <table class="table is-fullwidth">
                             <thead>
                             <tr>
                                 <th style="width: 5%">ID</th>
-                                <th style="width: 15%">Observed at</th>
-                                <th style="width: 20%">Species</th>
-                                <th style="width: 20%">Location</th>
-                                <th style="width: 20%">User</th>
-                                <th style="width: 20%">Gear</th>
+                                <th style="width: 15%">Name</th>
+                                <th style="width: 20%">Latitude</th>
+                                <th style="width: 20%">Longitude</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($observations as $observation)
+                            @foreach($locations as $location)
                                 <tr>
-                                    <td>{{ $observation->id }}</td>
                                     <td>
-                                        <a href="#">
-                                            {{ $observation->observed_at }}
-                                        </a>
+                                    <a href="{{route('locations.show', $location)}}">{{ $location->id }}                                    </td>
+                                    <td>
+                                        {{ $location->name }}
                                     </td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>
+                                        {{ $location->latitude }}
+                                    <td>
+                                        {{ $location->longitude }}
+                                    </td>
                                 </tr>
                             @endforeach
+                            <div>
+                                {{ $locations->links() }}
+                            </div>
                             </tbody>
                         </table>
                     </div>

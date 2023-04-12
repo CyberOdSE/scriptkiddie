@@ -110,6 +110,7 @@ $ php ./vendor/bin/phpcs
 ## Authors
 
 * **Daan de Waard** - *Initial work* - [dwaard](https://github.com/dwaard)
+* **Odin Spape** - *Exam Candidate* - [CyberOdSE] (https://github.com/CyberOdSE)
 
 ## License
 

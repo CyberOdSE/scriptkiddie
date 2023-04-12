@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\ObservationController;
 use App\Http\Controllers\PostController;
 use App\Models\Post;
@@ -27,3 +28,4 @@ Route::get('/', function () {
 // Resource routes of the base pages.
 Route::resource('/posts', PostController::class);
 Route::resource('/observations', ObservationController::class);
+Route::resource('/locations', LocationController::class);
