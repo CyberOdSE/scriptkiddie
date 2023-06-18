@@ -62,6 +62,7 @@ class LocationController extends Controller
         return view('locations.edit', compact('location'));
     }
 
+
     /**
      * Update the specified resource in storage.
      *

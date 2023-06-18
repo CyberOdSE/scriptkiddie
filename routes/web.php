@@ -29,3 +29,14 @@ Route::get('/', function () {
 Route::resource('/posts', PostController::class);
 Route::resource('/observations', ObservationController::class);
 Route::resource('/locations', LocationController::class);
+Route::get('/trigger-500-error', function () { abort(500); });
+Route::resource('/locations/contact', LocationController::class);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// User registration routes
+Route::get('/register', 'App\Http\Controllers\Auth\RegisterController@showRegistrationForm')->name('register');
+Route::post('/register', 'App\Http\Controllers\Auth\RegisterController@register');
+
